@@ -23,10 +23,17 @@ const TodoContainer = () => {
 
     return (
         <section>
-            <h1 className="title">Todo List</h1>
+            <div className="main">
+                <h1 className="home">Todo List</h1>
+                <span className="logo">React</span>
+            </div>
             <TodoForm setTodos={setTodos} />
-            <TodoList title="Working" todos={workingTodos} setTodos={setTodos} />
-            <TodoList title="Done" todos={doneTodos} setTodos={setTodos} />
+            <div className="working-background">
+                <TodoList title="Working" todos={workingTodos} setTodos={setTodos} />
+            </div>
+            <div className="money-background">
+                <TodoList title="Done" todos={doneTodos} setTodos={setTodos} />
+            </div>
         </section>
     );
 };

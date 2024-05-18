@@ -26,13 +26,18 @@ const TodoForm = ({ setTodos }) => {
 
         e.target.reset();
     };
-
     return (
-        <div>
+        <div className="contents">
             <form onSubmit={onSubmit}>
-                <input type="text" placeholder="제목" name="title" />
-                <input type="text" placeholder="내용" name="content" />
-                <button type="submit">등록</button>
+                <div className="input-group">
+                    <label htmlFor="todo-title">제목:</label>
+                    <input type="text" id="todo-title" placeholder="제목을 입력하세요" name="title" />
+                </div>
+                <div className="input-group">
+                    <label htmlFor="todo-content">내용:</label>
+                    <input type="text" id="todo-content" placeholder="내용을 입력하세요" name="content" />
+                </div>
+                <button type="submit">추가하기</button>
             </form>
         </div>
     );
